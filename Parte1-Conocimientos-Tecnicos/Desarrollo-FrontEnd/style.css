@@ -11,7 +11,8 @@
 }
 
 body{
-    background: green;
+    background: rgb(137,201,61);
+    background: linear-gradient(100deg, rgba(137,201,61,1) 0%, rgba(56,96,33,1) 50%, rgba(137,201,61,1) 100%); 
 }
 
 header{
@@ -158,4 +159,77 @@ footer .social-media a i{
 footer .social-media a i:hover{
     transform: scale(1.1);
     background:  rgb(113,87,26);
+}
+
+/* responsive design */
+@media (max-width: 990px) {
+    header{
+        padding: 2rem 4rem;
+    }
+
+     section{
+        padding: 2rem;
+     }
+
+     .hero-image{
+        width: 320px;
+     }
+    
+     .hero-text > *{
+        margin-bottom: 12px;
+     }
+}
+
+@media(max-width: 968px){
+
+    #bars-Menu{
+        display: block;
+        padding: 8px;
+        border: none;
+        border-radius: 100%;
+        background: #053a03;
+        transition: .2s ease-in-out;
+    }
+    #bars-Menu:hover{
+        background:  #71571a;
+    }
+
+    .navLinks{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        border: solid;
+        top: 50%;
+        right: -100%;
+        padding: 2rem 1rem;
+        width: 40vw;
+        height: 50vh;
+        justify-content: space-between;
+        align-items: center;
+        background: #053a03d2;
+        transition: .3s ease-in-out;
+    }
+
+    .navLinks.open{
+        right: 4.2rem;
+    }
+}
+
+@media(max-width: 480px){
+    .hero{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .hero-image{
+        widows: 320px;
+        margin-top: 25%;
+    }
+
+    .hero-image img{
+        width: 100%;
+    }
+
+    footer{
+        padding: 1rem;
+    }
 }
